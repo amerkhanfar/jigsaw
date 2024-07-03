@@ -42,6 +42,13 @@
   text-align: center;
   color: white;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; /* Text stroke effect */
+  width: 70%;
 }
 
 .Button {
