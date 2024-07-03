@@ -1,17 +1,16 @@
-// components/Puzzle.js
 import React, { useState, useEffect } from "react";
 import styles from "./Puzzle.module.css";
 
 const shuffleArray = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+  let shuffledArray = array.slice(); // Copy the array
+  do {
+    shuffledArray = array.sort(() => Math.random() - 0.5);
+  } while (hasDuplicates(shuffledArray));
+  return shuffledArray;
 };
 
-const isSolved = (grid) => {
-  return grid.every((value, index) => value === index);
+const hasDuplicates = (array) => {
+  return new Set(array).size !== array.length;
 };
 
 const Puzzle = ({ imageSrc, onComplete }) => {
@@ -42,6 +41,10 @@ const Puzzle = ({ imageSrc, onComplete }) => {
     }
   };
 
+  const isSolved = (grid) => {
+    return grid.every((value, index) => value === index);
+  };
+
   return (
     <div className={styles.puzzle}>
       {grid.map((value, i) => (
@@ -52,13 +55,13 @@ const Puzzle = ({ imageSrc, onComplete }) => {
           }`}
           onClick={() => handleClick(i)}
           style={{
-            transform: `translate(${(i % 4) * 100}px, ${
-              Math.floor(i / 4) * 100
+            transform: `translate(${(i % 4) * 200}px, ${
+              Math.floor(i / 4) * 200
             }px)`,
             backgroundImage: `url(${imageSrc})`,
-            backgroundPosition: `${(value % 4) * -100}% ${
-              Math.floor(value / 4) * -100
-            }%`,
+            backgroundPosition: `${(value % 4) * -200}px ${
+              Math.floor(value / 4) * -200
+            }px`,
             backgroundSize: `400% 400%`,
           }}
         />

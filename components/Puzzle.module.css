@@ -1,8 +1,7 @@
-/* styles/Puzzle.module.css */
 .puzzle {
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 800px;
+  height: 800px;
   margin: auto;
   z-index: 5;
   display: flex;
@@ -11,24 +10,24 @@
 
 .square {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 202px;
+  height: 202px;
   border: 1px solid #ccc;
   cursor: pointer;
   background-size: 400% 400%;
-  transition: transform 0.3s ease; /* Add transition for smooth movement */
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .selected {
-  border: 2px solid red;
+  outline: 3px solid red;
 }
 
 .steps {
   text-align: center;
-  margin-top: 20px; /* Add margin for better positioning */
-  font-size: 30px; /* Increase font size for better visibility */
-
-  color: #fff; /* Set a darker color for contrast */
+  margin-top: 20px;
+  font-size: 30px;
+  color: #fff;
   position: absolute;
   top: -100px;
 }

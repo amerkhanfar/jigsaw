@@ -1,0 +1,22 @@
+.balloon {
+  position: absolute;
+  left: 0px;
+
+  transition: top 5s linear; /* Adjust animation speed as needed */
+}
+
+.balloon2 {
+  position: absolute;
+  right: 0px;
+
+  transition: top 5s linear; /* Adjust animation speed as needed */
+}
+
+@keyframes balloonAnimation {
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
