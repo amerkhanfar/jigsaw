@@ -17,10 +17,12 @@
   background-size: 400% 400%;
   transition: transform 0.3s ease;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .selected {
   outline: 3px solid red;
+  z-index: 20;
 }
 
 .steps {
