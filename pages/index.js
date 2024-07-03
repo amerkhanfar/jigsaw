@@ -4,7 +4,7 @@ import Balloon from "../components/Balloon";
 import styles from "./index.module.css";
 
 export default function Home() {
-  const [isComplete, setIsComplete] = useState(true);
+  const [isComplete, setIsComplete] = useState(false);
   const [steps, setSteps] = useState(0);
   const [imageIndex, setImageIndex] = useState(0); // State to track current image index
   const imageArray = ["/family.jpg", "/puzzle.jpg", "/oplus.png"];
