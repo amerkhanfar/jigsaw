@@ -8,7 +8,7 @@ export default function Home() {
   const [steps, setSteps] = useState(0);
   const [imageIndex, setImageIndex] = useState(0); // State to track current image index
   const [showStartScreen, setShowStartScreen] = useState(true); // State to control start screen
-  const imageArray = ["/family.jpg", "/puzzle.jpg", "/oplus.png"];
+  const imageArray = ["/family.jpg", "/puzzle.jpg", "/birthday.jpg"];
 
   const handleComplete = () => {
     setIsComplete(true);
