@@ -1,6 +1,12 @@
+1;
+
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  compiler: {
+    reactStrictMode: true,
+    styledComponents: true,
+  },
 };
 
 export default nextConfig;
