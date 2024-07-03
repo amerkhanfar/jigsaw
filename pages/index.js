@@ -30,7 +30,7 @@ export default function Home() {
       {showStartScreen && (
         <div className={styles.messageBox}>
           <h1 className={styles.Happy}>Welcome to the Puzzle Game!</h1>
-          <div style={{ width: "60%", textAlign: "center", fontSize: "19px" }}>
+          <div style={{ width: "100%", textAlign: "center", fontSize: "19px" }}>
             <p>
               Your challenge is to rearrange the scattered pieces of an image to
               recreate the complete picture, which you can preview in the bottom
